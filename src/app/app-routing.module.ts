@@ -6,11 +6,19 @@ const routes: Routes = [
     path: 'home',
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
+  //{
+    //path: '',
+    //edirectTo: 'home',
+    //pathMatch: 'full'
+  //},
   {
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
+    path: 'about',
+    loadChildren: () => import('./about/about.module').then( m => m.AboutPageModule)
   },
+  {
+    path: 'splash',
+    loadChildren: () => import('./splash/splash.module').then( m => m.SplashPageModule)
+  }
 ];
 
 @NgModule({
