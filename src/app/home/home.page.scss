@@ -21,6 +21,21 @@
   text-decoration: none;
 }
 
+#home-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10em;
+}
+
+#logo {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-container {
+  margin-top: 50px;
+}
+
 .disclaimer-container {
   position: fixed;
   left: 0px;
