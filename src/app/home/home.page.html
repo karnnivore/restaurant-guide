@@ -1,5 +1,5 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar class="header-background">
     <ion-title>
       Fancy Finder
     </ion-title>
@@ -8,18 +8,23 @@
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Fancy Finder</ion-title>
-    </ion-toolbar>
   </ion-header>
 
   <div id="container">
     <div id="home-container">
-      <img id="logo" width="200" height="200"/>
+      <img id="logo" src="assets/Food_Guide_3.png "width="200" height="200"/>
       <strong>Helping you find fancy, faster</strong>
       <div class="btn-container">
-        <ion-button [routerLink]="['/main-list']">Guide</ion-button>
-        <ion-button [routerLink]="['/about']">Our Team</ion-button>
+        <ion-button 
+          [routerLink]="['/main-list']"
+          color="dark">
+          Guide
+        </ion-button>
+        <ion-button 
+          [routerLink]="['/about']"
+          color="dark">
+          Our Team
+        </ion-button>
       </div>
     </div>
     <div class="disclaimer-container">
