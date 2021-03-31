@@ -1,0 +1,115 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Restaurant List</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Searchbar with cancel button shown on focus -->
+  <ion-searchbar showCancelButton="focus"></ion-searchbar>
+  <ion-list>
+    <ion-item>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Tony's Pizza</ion-card-title>
+          <ion-card-subtitle>Italian, Pizza</ion-card-subtitle>
+        </ion-card-header>
+      
+        <ion-card-content>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          Image goes here
+          <ion-item *ngFor="let item of items">
+            <ion-thumbnail slot="start">
+             <!--- <ion-img [src]="item.src"></ion-img> --> 
+            </ion-thumbnail>
+            <!-- <ion-label>{{item.text}}</ion-label> --->
+          </ion-item>
+          <div>
+          <ion-button>Details</ion-button>
+        </div>
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
+    <ion-item>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Rajmahal</ion-card-title>
+          <ion-card-subtitle>Indian, Roti</ion-card-subtitle>
+        </ion-card-header>
+      
+        <ion-card-content>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          Image goes here
+          <ion-item *ngFor="let item of items">
+            <ion-thumbnail slot="start">
+             <!--- <ion-img [src]="item.src"></ion-img> --> 
+            </ion-thumbnail>
+            <!-- <ion-label>{{item.text}}</ion-label> --->
+          </ion-item>
+          <div>
+            <ion-button>Details</ion-button>
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
+    <ion-item>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Thai Palace</ion-card-title>
+          <ion-card-subtitle>Thai, Pad Thai</ion-card-subtitle>
+        </ion-card-header>
+      
+        <ion-card-content>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          Image goes here
+          <ion-item *ngFor="let item of items">
+            <ion-thumbnail slot="start">
+             <!--- <ion-img [src]="item.src"></ion-img> --> 
+            </ion-thumbnail>
+            <!-- <ion-label>{{item.text}}</ion-label> --->
+          </ion-item>
+          <div>
+            <ion-button>Details</ion-button>
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
+    <ion-item>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Chez Paris </ion-card-title>
+          <ion-card-subtitle>French, Gourmet</ion-card-subtitle>
+        </ion-card-header>
+      
+        <ion-card-content>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          Image goes here
+          <ion-item *ngFor="let item of items">
+            <ion-thumbnail slot="start">
+             <!--- <ion-img [src]="item.src"></ion-img> --> 
+            </ion-thumbnail>
+            <!-- <ion-label>{{item.text}}</ion-label> --->
+          </ion-item>
+          <div>
+            <ion-button>Details</ion-button>
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
+  </ion-list>
+</ion-content>
