@@ -29,6 +29,14 @@ const routes: Routes = [
   {
     path: 'details-modal',
     loadChildren: () => import('./details-modal/details-modal.module').then( m => m.DetailsModalPageModule)
+  },
+  {
+    path: 'review',
+    loadChildren: () => import('./review/review.module').then( m => m.ReviewPageModule)
+  },
+  {
+    path: 'map',
+    loadChildren: () => import('./map/map.module').then( m => m.MapPageModule)
   }
 
 ];

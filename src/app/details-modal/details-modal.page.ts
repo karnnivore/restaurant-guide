@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
+import { ReviewPage } from '../review/review.page';
+import { MapPage } from '../map/map.page';
 
 @Component({
   selector: 'app-details-modal',
@@ -25,4 +27,30 @@ export class DetailsModalPage implements OnInit {
       'dismissed': true
     })
   }
+
+  //show review modal
+  async presentReview() {
+    const modal = await this.modalController.create({
+      component: ReviewPage,
+      cssClass: 'customModal',
+      componentProps: {
+        'name': this.name,
+      }
+    })
+    return await modal.present()
+  }
+
+  //show map
+  async presentMap() {
+    const modal = await this.modalController.create({
+      component: MapPage,
+      cssClass: 'customModal',
+      componentProps: {
+        'name': this.name,
+      }
+    })
+    return await modal.present()
+  }
+
+
 }
