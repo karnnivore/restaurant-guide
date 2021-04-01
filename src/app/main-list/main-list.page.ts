@@ -18,6 +18,13 @@ export class MainListPage implements OnInit {
     const modal = await this.modalController.create({
       component: DetailsModalPage,
       cssClass: 'customModal',
+      componentProps: {
+        'name': 'Tony\'s Pizza',
+        'address': '123 Fake St.',
+        'rating' : 5,
+        'description' : 'The best pizza in town',
+        'tags' : ['Italian', 'Pizza']
+      }
     })
     return await modal.present()
   }

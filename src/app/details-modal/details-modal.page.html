@@ -8,5 +8,39 @@
 </ion-header>
 
 <ion-content>
-
+  <div id="modal-container">
+    <img id="restaurant-image" width="200" height="200"/>
+    <ion-row class="modal-row">
+      <ion-col class="col-title">Name</ion-col>
+      <ion-col class="col-info">{{name}}</ion-col>
+    </ion-row>
+    <ion-row class="modal-row">
+      <ion-col class="col-title">Address</ion-col>
+      <ion-col class="col-info">{{address}}</ion-col>
+    </ion-row>
+    <ion-row class="modal-row">
+      <ion-col class="col-title">Rating</ion-col>
+      <ion-col class="col-info">{{rating}}</ion-col>
+    </ion-row>
+    <ion-row class="modal-row">
+      <ion-col class="col-title">Description</ion-col>
+      <ion-col class="col-info">{{description}}</ion-col>
+    </ion-row>
+    <ion-row class="modal-row">
+      <ion-col class="col-title">Tags</ion-col>
+      <ion-col class="col-info">{{tags}}</ion-col>
+    </ion-row>
+    <ion-row style="justify-content: space-between;">
+      <ion-button class="modal-btn">Map</ion-button>
+      <ion-button class="modal-btn">Review</ion-button>
+    </ion-row>
+    <ion-row style="justify-content: space-between;">
+      <ion-button>
+        <ion-icon name="logo-twitter"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon name="logo-facebook"></ion-icon>
+      </ion-button>
+    </ion-row>
+  </div>
 </ion-content>

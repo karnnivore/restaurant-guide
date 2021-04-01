@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 
 @Component({
@@ -7,6 +7,13 @@ import { ModalController } from '@ionic/angular';
   styleUrls: ['./details-modal.page.scss'],
 })
 export class DetailsModalPage implements OnInit {
+
+  //data passed by componentProps
+  @Input() name: string;
+  @Input() address: string;
+  @Input() rating: number;
+  @Input() description: string;
+  @Input() tags: string[];
 
   constructor(public modalController: ModalController) { }
 
