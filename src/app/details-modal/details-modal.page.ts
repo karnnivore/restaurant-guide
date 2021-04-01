@@ -47,6 +47,8 @@ export class DetailsModalPage implements OnInit {
       cssClass: 'customModal',
       componentProps: {
         'name': this.name,
+        'rating': this.rating,
+        'tags' : this.tags
       }
     })
     return await modal.present()

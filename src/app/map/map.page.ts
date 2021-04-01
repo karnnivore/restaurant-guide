@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 @Component({
   selector: 'app-map',
@@ -9,8 +9,10 @@ export class MapPage implements OnInit {
 
   //data passed from prev modal
   @Input() name: string;
+  @Input() rating: number;
+  @Input() tags: string[];
 
-  constructor() { }
+  constructor(public modalController: ModalController) { }
 
   ngOnInit() {
   }

@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Map</ion-title>
+    <ion-title>Map {{name}}</ion-title>
     <ion-buttons slot="end">
       <ion-button (click)="dismiss()">Close</ion-button>
     </ion-buttons>
@@ -8,5 +8,21 @@
 </ion-header>
 
 <ion-content>
-
+  <div id="app-container">
+    <div id="store-info">
+      <img id="modal-img" height="100" width="75"/>
+      <div>
+        <h2>{{name}}</h2>
+        <p>{{rating}}</p>
+        <p>{{tags}}</p>
+      </div>
+    </div>
+    <div id="map-area">
+      <img height="400px" width="300px" />
+    </div>
+    <div id="btns">
+      <ion-button>Directions</ion-button>
+      <ion-button>Details</ion-button>
+    </div>
+  </div>
 </ion-content>
