@@ -22,7 +22,15 @@ const routes: Routes = [
   {
     path: 'main-list',
     loadChildren: () => import('./main-list/main-list.module').then( m => m.MainListPageModule)
+  },  {
+    path: 'tony-pizza',
+    loadChildren: () => import('./tony-pizza/tony-pizza.module').then( m => m.TonyPizzaPageModule)
+  },
+  {
+    path: 'details-modal',
+    loadChildren: () => import('./details-modal/details-modal.module').then( m => m.DetailsModalPageModule)
   }
+
 ];
 
 @NgModule({
