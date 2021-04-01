@@ -1,9 +1,26 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Review</ion-title>
+    <ion-title>Review {{name}}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismiss()">Close</ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <div id="modal-container">
+    <img id="restaurant-image" width="200" height="200"/>
+    <ion-item>
+      <ion-label>Your Name</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Rating</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Comments</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+  </div>
 </ion-content>

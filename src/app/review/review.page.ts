@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, Input, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
 @Component({
   selector: 'app-review',
   templateUrl: './review.page.html',
@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReviewPage implements OnInit {
 
-  constructor() { }
+  //data passed from prev modal
+  @Input() name: string;
+
+  constructor(public modalController: ModalController) { }
 
   ngOnInit() {
+  }
+
+  //dismiss modal
+  dismiss() {
+    this.modalController.dismiss({
+      'dismissed': true
+    })
   }
 
 }
