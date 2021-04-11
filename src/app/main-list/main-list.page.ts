@@ -21,7 +21,8 @@ export class MainListPage implements OnInit {
       componentProps: {
         'name': 'Tony\'s Pizza',
         'address': '123 Fake St.',
-        'rating' : 4,
+        'image' : "assets/toronto-food-one-night-only-pizza-grating-1-368x0-c-default.jpg",
+        'rating' : 2,
         'description' : 'The best pizza in town',
         'tags' : ['Italian', 'Pizza']
       }
@@ -36,7 +37,8 @@ export class MainListPage implements OnInit {
       componentProps: {
         'name': 'Rajmahal',
         'address': '241 Yonge St.',
-        'rating' : 4,
+        'image': "assets/Roti food.jpg",
+        'rating' : 3,
         'description' : 'Really great indian food',
         'tags' : ['Indian', 'Roti']
       }
@@ -51,7 +53,8 @@ export class MainListPage implements OnInit {
       componentProps: {
         'name': 'Thai Palace',
         'address': '573 College St.',
-        'rating' : 4,
+        'image': "assets/thai food.jpg",
+        'rating' : 3,
         'description' : 'The best Pad Thai',
         'tags' : ['Thai', 'Pad Thai']
       }
@@ -66,6 +69,7 @@ export class MainListPage implements OnInit {
       componentProps: {
         'name': 'Chez Paris',
         'address': '273 Church St.',
+        'image': "assets/fancy french.jpg",
         'rating' : 4,
         'description' : 'Bon apetit, great french food',
         'tags' : ['French', 'Gourmet']

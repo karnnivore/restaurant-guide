@@ -11,6 +11,8 @@ export class MapPage implements OnInit {
   @Input() name: string;
   @Input() rating: number;
   @Input() tags: string[];
+  @Input() image: string;
+
 
   constructor(public modalController: ModalController) { }
 

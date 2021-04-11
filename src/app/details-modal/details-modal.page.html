@@ -7,9 +7,10 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content  color="dark">
   <div id="modal-container">
-    <img id="restaurant-image" width="200" height="200"/>
+    <!-- <img id="restaurant-image" width="200" height="200"/> -->
+    <ion-img [src]="image"></ion-img>
     <ion-row class="modal-row">
       <ion-col class="col-title">Name</ion-col>
       <ion-col class="col-info">{{name}}</ion-col>
