@@ -7,10 +7,12 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content  color="dark">
   <div id="app-container">
     <div id="store-info">
-      <img id="modal-img" height="100" width="75"/>
+      <ion-thumbnail  slot="start">
+        <ion-img [src]="image"></ion-img>
+      </ion-thumbnail>
       <div>
         <h2>{{name}}</h2>
         <p>{{rating}}</p>
@@ -22,7 +24,13 @@
     </div>
     <div id="btns">
       <ion-button>Directions</ion-button>
-      <ion-button>Details</ion-button>
+
+    <!--This button should route to the main list. It is currently not working. [2021-04-11 2:12PM] -->  
+    <ion-button 
+      [routerLink]="['/main-list']">
+      Return to List
+    </ion-button>
+
     </div>
   </div>
 </ion-content>

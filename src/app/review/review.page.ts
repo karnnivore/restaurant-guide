@@ -9,6 +9,7 @@ export class ReviewPage implements OnInit {
 
   //data passed from prev modal
   @Input() name: string;
+  @Input() image: string;
 
   constructor(public modalController: ModalController) { }
 

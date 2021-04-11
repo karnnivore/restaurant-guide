@@ -13,6 +13,7 @@ export class DetailsModalPage implements OnInit {
   //data passed by componentProps
   @Input() name: string;
   @Input() address: string;
+  @Input() image: string;
   @Input() rating: number;
   @Input() description: string;
   @Input() tags: string[];
@@ -28,6 +29,8 @@ export class DetailsModalPage implements OnInit {
     })
   }
 
+  
+
   //show review modal
   async presentReview() {
     const modal = await this.modalController.create({
@@ -35,6 +38,8 @@ export class DetailsModalPage implements OnInit {
       cssClass: 'customModal',
       componentProps: {
         'name': this.name,
+        'image' : this.image
+
       }
     })
     return await modal.present()
@@ -48,7 +53,9 @@ export class DetailsModalPage implements OnInit {
       componentProps: {
         'name': this.name,
         'rating': this.rating,
-        'tags' : this.tags
+        'tags' : this.tags,
+        'image' : this.image
+
       }
     })
     return await modal.present()
