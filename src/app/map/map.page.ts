@@ -14,6 +14,9 @@ export class MapPage implements OnInit {
   @Input() rating: number;
   @Input() tags: string[];
   @Input() image: string;
+  @Input() latitude: number;
+  @Input() longitude: number;
+  @Input() description: string;
 
   map: any;
 
@@ -23,15 +26,20 @@ export class MapPage implements OnInit {
   infoWindows: any = [];
   markers: any = {
   };
+  lat: number;
+  long: number;
 
   constructor(public modalController: ModalController) { }
 
   ngOnInit() {
     this.markers = {
       title: this.name,
-      latitude: -17.824858,
-      longitude: 31.053028
+      latitude: this.latitude,
+      longitude: this.longitude,
+      description: this.description
     }
+    this.lat = this.latitude
+    this.long = this.longitude
   }
 
   ionViewDidEnter() {
@@ -44,7 +52,8 @@ export class MapPage implements OnInit {
         position: position,
         title: markers.title,
         latitude: markers.latitude,
-        longitude: markers.longitude
+        longitude: markers.longitude,
+        description: markers.description
       })
 
       mapMarker.setMap(this.map);
@@ -54,8 +63,7 @@ export class MapPage implements OnInit {
   addInfoWindowToMarker(marker) {
     let infoWindowContent = '<div>' + 
                             '<h2 id="firstHeading" class="firstHeading content" style="color: black">' + marker.title + '</h2>' +
-                            '<p class="content" style="color: black">Latitude: ' + marker.latitude + '</p>' + 
-                            '<p class="content" style="color: black">Longitude: ' + marker.longitude + '</p>' +
+                            '<p class="content" style="color: black">Description: ' + marker.description + '</p>' + 
                             '</div>';
     let infoWindow = new google.maps.InfoWindow({
       content: infoWindowContent
@@ -76,7 +84,9 @@ export class MapPage implements OnInit {
 
   //display new map
   showMap() {
-    const location = new google.maps.LatLng(-17.824858, 31.053028);
+    console.log(this.lat, this.long)
+    console.log(this.latitude, this.longitude)
+    const location = new google.maps.LatLng(this.lat, this.long);
     const options = {
       center: location,
       zoom: 15,

@@ -17,6 +17,8 @@ export class DetailsModalPage implements OnInit {
   @Input() rating: number;
   @Input() description: string;
   @Input() tags: string[];
+  @Input() latitude: number;
+  @Input() longitude: number;
 
   constructor(public modalController: ModalController) { }
 
@@ -54,7 +56,10 @@ export class DetailsModalPage implements OnInit {
         'name': this.name,
         'rating': this.rating,
         'tags' : this.tags,
-        'image' : this.image
+        'image' : this.image,
+        'latitude' : this.latitude,
+        'longitude' : this.longitude,
+        'description' : this.description
 
       }
     })
