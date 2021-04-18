@@ -9,9 +9,9 @@
 
 <ion-content>
   <!-- Searchbar with cancel button shown on focus -->
-  <ion-searchbar showCancelButton="focus" color="dark"></ion-searchbar>
+  <ion-searchbar #search debounce="500" (ionChange)="_ionChange($event)" showCancelButton="focus" color="dark"></ion-searchbar>
   <ion-list>
-    <ion-item color="dark">
+    <ion-item *ngFor="let item of searchedItem"  color="dark">
       <ion-card color="dark">
         <ion-card-header>
           <ion-card-title>Tony's Pizza</ion-card-title>

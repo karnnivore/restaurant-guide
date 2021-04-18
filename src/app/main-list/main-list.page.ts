@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { ModalController } from '@ionic/angular';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { IonSearchbar, ModalController } from '@ionic/angular';
 import { DetailsModalPage } from '../details-modal/details-modal.page';
 
 @Component({
@@ -8,6 +8,10 @@ import { DetailsModalPage } from '../details-modal/details-modal.page';
   styleUrls: ['./main-list.page.scss'],
 })
 export class MainListPage implements OnInit {
+
+  @ViewChild('search', {static: false}) search: IonSearchbar;
+
+  private searchedItem: any;
 
   constructor(public modalController: ModalController) { }
 
@@ -84,6 +88,22 @@ export class MainListPage implements OnInit {
       }
     })
     return await modal.present()
+  }
+  _ionChange(event){
+    const value = event.target.value;
+    // need to pass the component props values or the data in some form here 
+ 
+    if(value && value.trim()!= ''){
+      this.searchedItem = this.searchedItem.filter((item: any)=> {
+        return (item.toLowerCase().indexOf(value.toLowerCase()) > -1);
+      })
+    }
+  }
+
+  ionViewDidEnter(){
+    setTimeout(() => {
+      this.search.setFocus();
+    });
   }
 
 }

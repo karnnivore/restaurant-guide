@@ -8,12 +8,15 @@ import { MainListPageRoutingModule } from './main-list-routing.module';
 
 import { MainListPage } from './main-list.page';
 
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    MainListPageRoutingModule
+    MainListPageRoutingModule,
+    Ng2SearchPipeModule
   ],
   declarations: [MainListPage]
 })
